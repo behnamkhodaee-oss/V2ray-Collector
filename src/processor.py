@@ -29,11 +29,15 @@ def save_state(state):
 def load_configs():
     if not Path(INPUT_FILE).exists():
         return []
-    return [
+
+    configs = [
         line.strip()
         for line in Path(INPUT_FILE).read_text(encoding="utf-8").splitlines()
         if line.strip()
     ]
+
+    # جلوگیری از پردازش تکراری در هر اجرا
+    return list(set(configs))
 
 
 def main():
@@ -45,13 +49,13 @@ def main():
     configs = load_configs()
     state = load_state()
 
-    # 1. assign timestamp to new configs
+    # 1. فقط برای کانفیگ‌های جدید timestamp ثبت کن
     for c in configs:
         if c not in state:
             state[c] = now
             print(f"🆕 new config added: {c[:40]}...")
 
-    # 2. remove expired configs (older than 6 hours)
+    # 2. حذف کانفیگ‌های قدیمی (بیشتر از 6 ساعت)
     filtered_state = {
         c: ts for c, ts in state.items()
         if ts >= cutoff
@@ -63,13 +67,13 @@ def main():
 
     state = filtered_state
 
-    # 3. write output file (only active configs)
+    # 3. ذخیره خروجی نهایی
     Path(OUTPUT_FILE).write_text(
         "\n".join(state.keys()),
         encoding="utf-8"
     )
 
-    # 4. save state for next run
+    # 4. ذخیره state برای اجرای بعدی
     save_state(state)
 
     print(f"✅ Done. Active configs: {len(state)}")
