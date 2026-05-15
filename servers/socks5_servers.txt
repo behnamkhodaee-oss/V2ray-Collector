@@ -1,1 +1,2 @@
-socks5://128.140.46.169:13482&amp;security=tls&amp;sni=harmony-501.pages.dev&amp;type=ws#%F0%9F%87%A9%F0%9F%87%AA%20t.me%2FNatrixo%20BB
+socks5://62.220.126.56:26132/#%4014oneclickvpnkeys
+socks5://62.220.126.92:32302/#%4014oneclickvpnkeys
