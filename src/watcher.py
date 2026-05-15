@@ -1,12 +1,12 @@
+
 import time
 import os
-import processor  # فایل processor.py باید کنار این باشه
+import processor
 
-FILE = "all_servers.txt"   # چون در ریشه پروژه است
-CHECK_INTERVAL = 15 * 60    # 15 دقیقه
+FILE = "all_servers.txt"
+CHECK_INTERVAL = 15 * 60  # 15 minutes
 
 last_mtime = 0
-
 
 def get_mtime(path):
     try:
@@ -14,24 +14,27 @@ def get_mtime(path):
     except FileNotFoundError:
         return 0
 
-
-print("👀 Watcher started... monitoring all_servers.txt")
+print("👀 Watcher started... (checking every 15 minutes)")
 
 while True:
-    mtime = get_mtime(FILE)
+    try:
+        mtime = get_mtime(FILE)
 
-    if mtime > last_mtime:
-        print("📦 Change detected → running processor...")
+        print(f"⏳ Checking file... {time.ctime()}")
 
-        last_mtime = mtime
+        if mtime > last_mtime:
+            print("📦 Change detected → running processor...")
 
-        try:
+            last_mtime = mtime
+
             processor.main()
-            print("✅ Processing done")
-        except Exception as e:
-            print(f"❌ Processor error: {e}")
 
-    else:
-        print("⏳ No change detected")
+            print("✅ Processing finished")
+
+        else:
+            print("— No change detected")
+
+    except Exception as e:
+        print(f"❌ Error: {e}")
 
     time.sleep(CHECK_INTERVAL)
