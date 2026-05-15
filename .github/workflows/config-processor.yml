@@ -1,9 +1,11 @@
 name: config-processor
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"   # هر 15 دقیقه
-  workflow_dispatch:         # مهم: برای دکمه Run دستی
+  workflow_dispatch:
+
+concurrency:
+  group: config-processor
+  cancel-in-progress: false
 
 jobs:
   process:
@@ -13,6 +15,8 @@ jobs:
       # 1. گرفتن کد پروژه
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       # 2. نصب Python
       - name: Setup Python
@@ -20,7 +24,7 @@ jobs:
         with:
           python-version: "3.10"
 
-      # 3. نصب dependencies (اگر داری)
+      # 3. نصب dependencies
       - name: Install requirements
         run: |
           if [ -f config/requirements.txt ]; then pip install -r config/requirements.txt; fi
@@ -41,3 +45,35 @@ jobs:
           git commit -m "update processed configs" || true
 
           git push || true
+
+      # 6. بررسی تغییرات
+      - name: Check changes
+        run: |
+          git fetch origin main
+
+          if git diff --quiet origin/main HEAD -- recent_servers.txt data/state.json; then
+            echo "NO_CHANGE=true" >> $GITHUB_ENV
+          else
+            echo "NO_CHANGE=false" >> $GITHUB_ENV
+          fi
+
+      # 7. اگر تغییر نبود → صبر 15 دقیقه
+      - name: Wait 15 minutes if no changes
+        if: env.NO_CHANGE == 'true'
+        run: |
+          echo "No changes detected → sleeping 15 minutes..."
+          sleep 900
+
+      # 8. زنجیره اجرای بعدی
+      - name: Trigger next run
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'config-processor.yml',
+              ref: 'main'
+            });
