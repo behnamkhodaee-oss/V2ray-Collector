@@ -1,2 +1,4 @@
-trojan://humanity@172.67.180.92:443?security=tls&amp;sni=www.multiplydose.com&amp;fp=chrome&amp;allowInsecure=1&amp;type=ws&amp;host=www.multiplydose.com&amp;path=%2Fassignment#
-trojan://humanity@188.114.96.3:443?path=%2Fassignment&amp;security=tls&amp;host=www.calmlunch.com&amp;type=ws&amp;sni=www.calmlunch.com#%F0%9F%87%AB%F0%9F%87%B7%20t.me%2FNatrixo%20AA
+trojan://7aXwJPnpAJ@150.241.65.18:50824#%F0%9F%8C%8D%20%40SlipGate_hub
+trojan://telegram-id-privatevpns@13.38.241.41:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S104)
+trojan://telegram-id-privatevpns@15.237.55.229:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S103)
+trojan://telegram-id-privatevpns@51.44.198.68:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S103)
