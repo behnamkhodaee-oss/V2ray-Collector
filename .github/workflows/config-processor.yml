@@ -28,7 +28,7 @@ jobs:
       # 4. اجرای processor
       - name: Run processor
         run: |
-          python processor.py
+          python src/processor.py
 
       # 5. Commit کردن خروجی
       - name: Commit results
