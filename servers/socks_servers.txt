@@ -1,5 +1,7 @@
-socks://Og%3D%3D@185.8.172.128:443#mobo_game_land
-socks://Og@62.220.126.92:30871#
-socks://Og@62.220.126.92:32302#
-socks://ZXJtaWE6RXJtaWEzNDcyI0AxODUuMjMxLjE4My4yMjk6ODA=#@ehsawn8
-socks://ZXJtaWE6RXJtaWEzNDcyIw@185.231.183.229:80#@ConfingV2RaayNG
+socks://JTQwdWJldF9tb25leTolNDB1YmV0X21vbmV5@45.129.39.6:49144#%40free_v2ray_npv
+socks://Og@185.8.172.128:443#%E2%8F%B3%40Proxy_Vpney%20%285%29
+socks://Og@62.220.126.56:30081#%40Proxy_Vpney%20v%2Bp%20%286%29
+socks://Og@62.220.126.92:30376#%E2%8F%B3%40Proxy_Vpney%20%283%29
+socks://Og@91.222.196.8:7071#%E2%8F%B3%40Proxy_Vpney%20%285%29
+socks://Og@94.101.176.90:10808#%E2%8F%B3%40Proxy_Vpney%20%281%29
+socks://ZXJtaWE6RXJtaWEzNDcyIw@185.231.183.229:80#SryLove
