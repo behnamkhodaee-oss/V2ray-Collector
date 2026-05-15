@@ -1,0 +1,50 @@
+name: Process Servers
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check if all_servers.txt changed
+        id: check
+        run: |
+          if git diff --quiet HEAD~1 HEAD -- all_servers.txt; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Python
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          pip install -r config/requirements.txt || true
+
+      - name: Run processor
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          python processor.py
+
+      - name: Commit results
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add recent_servers.txt data/state.json || true
+          git commit -m "update processed configs" || true
+          git push
