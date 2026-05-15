@@ -1,2 +1,1 @@
-socks5://62.220.126.56:26132/#%4014oneclickvpnkeys
-socks5://62.220.126.92:32302/#%4014oneclickvpnkeys
+socks5://206.123.156.236:9671
