@@ -6,7 +6,7 @@ INPUT_FILE = "all_servers.txt"
 STATE_FILE = "data/state.json"
 OUTPUT_FILE = "recent_servers.txt"
 
-WINDOW_SECONDS = 6 * 3600  # 6 hours
+WINDOW_SECONDS = 3 * 1800  # 3 hours
 
 
 def load_state():
