@@ -1,2 +1,6 @@
-trojan://q2jXRWncMA7pQren_VjQKhSQfoBWK_@91.184.250.116:2083?security=tls&amp;sni=xo.e0f.cx&amp;type=ws&amp;host=xo.e0f.cx&amp;path=/trojan-ws#v2ray_dalghak
-trojan://telegram-id-privatevpns@63.183.179.231:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S101)
+trojan://2a599135-886f-4359-bf68-0993baa990f1@79.127.82.170:443?path=%2F1000%2F10%2Fb449693f-1869-4379-946d-279f2ad95021&amp;security=tls&amp;alpn=h3%2Ch2%2Chttp%2F1.1&amp;insecure=0&amp;host=wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd&amp;fp=randomized&amp;type=ws&amp;allowInsecure=0&amp;sni=wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd#%40VIP
+trojan://humanity@172.64.152.23:443?security=tls&amp;sni=www.creationlong.org&amp;allowInsecure=1&amp;type=ws&amp;host=www.creationlong.org&amp;path=%2Fassignment#
+trojan://telegram-id-privatevpns@13.38.241.41:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk
+trojan://telegram-id-privatevpns@15.237.55.229:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@51.44.198.68:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@63.183.179.231:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
