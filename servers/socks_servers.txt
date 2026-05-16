@@ -1,3 +1,2 @@
-socks://Og@127.0.0.1:10880#%40Pirimod
-socks://Og@62.220.126.56:30170#@v2ray_plusz
-socks://Og@62.220.126.92:30871#@v2ray_plusz
+socks://Og@62.220.126.92:30871#%F0%9F%94%B0%20%40PewezaTech%20%28%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%29
+socks://Og@62.220.126.92:32302#%F0%9F%94%B0%20%40PewezaTech%20%28%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%29
