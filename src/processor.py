@@ -55,7 +55,7 @@ def main():
             state[c] = now
             print(f"🆕 new config added: {c[:40]}...")
 
-    # 2. حذف کانفیگ‌های قدیمی (بیشتر از 6 ساعت)
+    # 2. حذف کانفیگ‌های قدیمی (بیشتر از 3 ساعت)
     filtered_state = {
         c: ts for c, ts in state.items()
         if ts >= cutoff
