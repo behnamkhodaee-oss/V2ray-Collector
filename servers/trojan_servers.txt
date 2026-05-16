@@ -1,3 +1,5 @@
-trojan://1111@172.64.144.86:8443?sni=v2ngfast-v2ngfast-v2ngfast-v2ngfast.dipemi1953.workers.dev&amp;peer=v2ngfast-v2ngfast-v2ngfast-v2ngfast.dipemi1953.workers.dev&amp;security=tls#v2ray_dalghak
-trojan://humanity@104.21.40.34:443?security=tls&amp;sni=www.gossipglove.com&amp;allowInsecure=1&amp;type=ws&amp;host=www.gossipglove.com&amp;path=%2Fassignment#
-trojan://q2jXRWncMA7pQren_VjQKhSQfoBWK_@91.184.250.116:2083?security=tls&amp;sni=xo.e0f.cx&amp;type=ws&amp;host=xo.e0f.cx&amp;path=/trojan-ws#[55904]
+trojan://q2jXRWncMA7pQren_VjQKhSQfoBWK_@91.184.250.116:2083?security=tls&amp;sni=xo.e0f.cx&amp;type=ws&amp;host=xo.e0f.cx&amp;path=/trojan-ws#v2ray_dalghak
+trojan://telegram-id-privatevpns@13.38.241.41:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@15.237.55.229:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@51.44.198.68:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@52.28.27.2:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
