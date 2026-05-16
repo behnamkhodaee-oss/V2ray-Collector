@@ -1,10 +1,2 @@
-trojan://1111@172.64.144.86:8443?sni=v2ngfast-v2ngfast-v2ngfast-v2ngfast.dipemi1953.workers.dev&amp;peer=v2ngfast-v2ngfast-v2ngfast-v2ngfast.dipemi1953.workers.dev&amp;security=tls#v2ray_dalghak
-trojan://2a599135-886f-4359-bf68-0993baa990f1@79.127.82.170:443?path=%2F1000%2F10%2Fb449693f-1869-4379-946d-279f2ad95021&amp;security=tls&amp;alpn=h3%2Ch2%2Chttp%2F1.1&amp;insecure=0&amp;host=wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd&amp;fp=randomized&amp;type=ws&amp;allowInsecure=0&amp;sni=wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd#%40v2ray_plusz%20%F0%9F%91%88%F0%9F%8E%BE%20%DA%A9%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%DB%8C%20%D9%85%D8%A7
-trojan://8r%3C%5B9%27l6hAO%238ZQi@46.101.160.68:2096?host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#v2ray_dalghak
-trojan://8r%3C%5B9%27l6hAO%238ZQi@46.101.201.36:2087?host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#v2ray_dalghak
-trojan://8r%3C%5B9%27l6hAO%238ZQi@89.107.10.22:8443?fp=chrome&amp;host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#v2ray_dalghak
-trojan://humanity@104.17.150.76:443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.creationlong.org&amp;type=ws&amp;allowInsecure=0&amp;sni=www.creationlong.org#%F0%9F%A7%94%E2%80%8D%E2%99%82%EF%B8%8F98%40oneclickvpnkeys
-trojan://humanity@8.6.112.0:443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.multiplydose.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.multiplydose.com
-trojan://mSzFVhUczD@104.20.5.134:443?path=%2F&amp;security=tls&amp;alpn=http%2F1.1&amp;insecure=0&amp;host=abest.api-tel.xyz&amp;type=ws&amp;allowInsecure=0&amp;sni=abest.api-tel.xyz#v2ray_dalghak
-trojan://telegram-id-directvpn@63.183.179.231:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#v2ray_dalghak
-trojan://telegram-id-privatevpns@63.183.179.231:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#v2ray_dalghak
+trojan://q2jXRWncMA7pQren_VjQKhSQfoBWK_@91.184.250.116:2083?security=tls&amp;sni=xo.e0f.cx&amp;type=ws&amp;host=xo.e0f.cx&amp;path=/trojan-ws#v2ray_dalghak
+trojan://telegram-id-privatevpns@63.183.179.231:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S101)
