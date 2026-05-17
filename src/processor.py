@@ -6,22 +6,26 @@ INPUT_FILE = "all_servers.txt"
 STATE_FILE = "data/state.json"
 OUTPUT_FILE = "recent_servers.txt"
 
-WINDOW_SECONDS = 3 * 1800  # 3 hours
+WINDOW_SECONDS = 3 * 3600  # 3 hours
 
 
 def load_state():
     if Path(STATE_FILE).exists():
         try:
-            return json.loads(Path(STATE_FILE).read_text(encoding="utf-8"))
-        except:
+            return json.loads(
+                Path(STATE_FILE).read_text(encoding="utf-8")
+            )
+        except Exception:
             return {}
+
     return {}
 
 
 def save_state(state):
     Path(STATE_FILE).parent.mkdir(parents=True, exist_ok=True)
+
     Path(STATE_FILE).write_text(
-        json.dumps(state, indent=2),
+        json.dumps(state, ensure_ascii=False),
         encoding="utf-8"
     )
 
@@ -30,18 +34,23 @@ def load_configs():
     if not Path(INPUT_FILE).exists():
         return []
 
-    configs = [
-        line.strip()
-        for line in Path(INPUT_FILE).read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
+    configs = []
 
-    # جلوگیری از پردازش تکراری در هر اجرا
-    return list(set(configs))
+    for line in Path(INPUT_FILE).read_text(
+        encoding="utf-8"
+    ).splitlines():
+
+        line = line.strip()
+
+        if line:
+            configs.append(line)
+
+    # حذف duplicate
+    return list(dict.fromkeys(configs))
 
 
 def main():
-    now = time.time()
+    now = int(time.time())
     cutoff = now - WINDOW_SECONDS
 
     print("⚙️ Processor started...")
@@ -49,34 +58,38 @@ def main():
     configs = load_configs()
     state = load_state()
 
-    # 1. فقط برای کانفیگ‌های جدید timestamp ثبت کن
-    for c in configs:
-        if c not in state:
-            state[c] = now
-            print(f"🆕 new config added: {c[:40]}...")
+    # فقط config جدید ثبت شود
+    for config in configs:
 
-    # 2. حذف کانفیگ‌های قدیمی (بیشتر از 3 ساعت)
-    filtered_state = {
-        c: ts for c, ts in state.items()
-        if ts >= cutoff
-    }
+        # اگر قبلاً دیده نشده
+        if config not in state:
+            state[config] = now
+            print(f"🆕 Added: {config[:50]}...")
+
+    # فقط configهای کمتر از 3 ساعت نگه داشته شوند
+    filtered_state = {}
+
+    for config, ts in state.items():
+
+        # اگر هنوز معتبر است
+        if ts >= cutoff:
+            filtered_state[config] = ts
 
     removed = len(state) - len(filtered_state)
-    if removed > 0:
-        print(f"🧹 removed {removed} expired configs")
 
-    state = filtered_state
+    if removed:
+        print(f"🧹 Removed {removed} expired configs")
 
-    # 3. ذخیره خروجی نهایی
+    # ذخیره state جدید
+    save_state(filtered_state)
+
+    # ذخیره خروجی نهایی
     Path(OUTPUT_FILE).write_text(
-        "\n".join(state.keys()),
+        "\n".join(filtered_state.keys()),
         encoding="utf-8"
     )
 
-    # 4. ذخیره state برای اجرای بعدی
-    save_state(state)
-
-    print(f"✅ Done. Active configs: {len(state)}")
+    print(f"✅ Active configs: {len(filtered_state)}")
 
 
 if __name__ == "__main__":
