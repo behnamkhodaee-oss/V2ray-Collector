@@ -15,14 +15,17 @@ def load_state():
             return json.loads(
                 Path(STATE_FILE).read_text(encoding="utf-8")
             )
-        except Exception:
+        except:
             return {}
 
     return {}
 
 
 def save_state(state):
-    Path(STATE_FILE).parent.mkdir(parents=True, exist_ok=True)
+    Path(STATE_FILE).parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
     Path(STATE_FILE).write_text(
         json.dumps(state, ensure_ascii=False),
@@ -50,6 +53,7 @@ def load_configs():
 
 
 def main():
+
     now = int(time.time())
     cutoff = now - WINDOW_SECONDS
 
@@ -58,36 +62,31 @@ def main():
     configs = load_configs()
     state = load_state()
 
-    # فقط config جدید ثبت شود
+    # هر config که الان داخل فایل هست
+    # timestamp جدید بگیرد
     for config in configs:
+        state[config] = now
 
-        # اگر قبلاً دیده نشده
-        if config not in state:
-            state[config] = now
-            print(f"🆕 Added: {config[:50]}...")
-
-    # فقط configهای کمتر از 3 ساعت نگه داشته شوند
-    filtered_state = {}
-
-    for config, ts in state.items():
-
-        # اگر هنوز معتبر است
-        if ts >= cutoff:
-            filtered_state[config] = ts
+    # فقط configهای 3 ساعت اخیر نگه داشته شوند
+    filtered_state = {
+        config: ts
+        for config, ts in state.items()
+        if ts >= cutoff
+    }
 
     removed = len(state) - len(filtered_state)
 
     if removed:
         print(f"🧹 Removed {removed} expired configs")
 
-    # ذخیره state جدید
-    save_state(filtered_state)
-
-    # ذخیره خروجی نهایی
+    # ذخیره خروجی
     Path(OUTPUT_FILE).write_text(
         "\n".join(filtered_state.keys()),
         encoding="utf-8"
     )
+
+    # ذخیره state
+    save_state(filtered_state)
 
     print(f"✅ Active configs: {len(filtered_state)}")
 
