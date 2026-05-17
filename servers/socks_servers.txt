@@ -1,2 +1,1 @@
-socks://Og%3D%3D@185.8.172.128:443#mobo_game_land
-socks://Og@127.0.0.1:10880#%40Pirimod
+socks://Og%3D%3D@188.121.121.155:1090#%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%20%40irconfi%20%D8%B1%D9%88%D8%A8%DB%8C%DA%A9%D8%A7%20%20%40wizardxray
