@@ -1,1 +1,11 @@
-trojan://3UThqDZRx2@193.151.150.161:443?type=tcp&amp;security=tls&amp;headerType=none&amp;sni=ir1.iobase.ir&amp;allowInsecure=1#%40filembad
+trojan://162534@43.165.190.11:42841?security=tls&amp;sni=cchh2.pages.dev&amp;type=ws&amp;host=cchh2.pages.dev&amp;path=%2F#v2ray_dalghak
+trojan://8r%3C%5B9%27l6hAO%238ZQi@147.45.101.55:2053?host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#v2ray_dalghak
+trojan://8r%3C%5B9%27l6hAO%238ZQi@176.57.212.248:8443?host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#[56698]
+trojan://8r%3C%5B9%27l6hAO%238ZQi@195.123.217.37:8443?host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#v2ray_dalghak
+trojan://8r%3C%5B9%27l6hAO%238ZQi@31.169.127.103:8443?allowInsecure=1&amp;ed=2560&amp;eh=Sec-WebSocket-Protocol&amp;fp=chrome&amp;host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#v2ray_dalghak
+trojan://8r%3C%5B9%27l6hAO%238ZQi@46.101.253.244:2053?allowInsecure=1&amp;fp=chrome&amp;host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#[56702]
+trojan://8r%3C%5B9%27l6hAO%238ZQi@77.221.157.251:2083?host=Koma-YT.PAGeS.Dev&amp;path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;sni=Koma-YT.PAGeS.Dev&amp;type=ws#[56704]
+trojan://humanity@www.calmlunch.com:443?allowInsecure=1&amp;path=%2Fassignment&amp;type=ws#v2ray_dalghak
+trojan://humanity@www.multiplydose.com:443?path=/assignment&amp;security=tls&amp;insecure=1&amp;fp=chrome&amp;type=ws&amp;allowInsecure=1&amp;sni=www.multiplydose.com#v2ray_dalghak
+trojan://q2jXRWncMA7pQren_VjQKhSQfoBWK_@91.184.250.116:2083?security=tls&amp;sni=xo.e0f.cx&amp;type=ws&amp;host=xo.e0f.cx&amp;path=/trojan-ws#v2ray_dalghak
+trojan://telegram-id-privatevpns@15.188.181.239:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#v2ray_dalghak
