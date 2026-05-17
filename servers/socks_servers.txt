@@ -1,1 +1,2 @@
+socks://127.0.0.1:18892
 socks://Og@185.239.106.84:1446#%40free_v2ray_npv%20%D9%88%D8%B5%D9%84%20%D8%B4%D8%AF%DB%8C%20%D8%AC%DB%8C%DA%AF%D8%B1
