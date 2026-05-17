@@ -13,7 +13,6 @@ hysteria2://7e2b98ee-5a4c-4630-b389-4afb2087621b@tw07.352343.cc:8080?sni=tw07.35
 hysteria2://7e2b98ee-5a4c-4630-b389-4afb2087621b@us03.344233.cc:20000?insecure=0&fp=&sni=us03.344233.cc&obfs=salamander&obfs-password=ZTBjNDA0YTVhNTFkMzFlOQ==#%F0%9F%87%BA%F0%9F%87%B8US_2%7C2.0MB/s
 hysteria2://DBUklcvOyH@45.81.19.251:443?insecure=1&sni=web.bale.ai#%40Proxy_Vpney%20v%2Bp%20%284%29
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@5.175.249.174:35000?insecure=0&sni=api.kermanshahi.org&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi#Telegram%20%3A%20%40V2ynpv
-hysteria2://dongtaiwang.com@62.210.124.146:22000/?insecure=1&amp;sni=www.microsoft.com#%F0%9F%8D%A541@oneclickvpnkeys
 hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#%F0%9F%8D%A541%40oneclickvpnkeys
 hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@13.201.123.38:443?insecure=1&sni=https://t.me/WangCai2🇨🇳#%F0%9F%87%AE%F0%9F%87%B3IN_%40WangCai_8
 hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@13.201.62.194:443?insecure=1&sni=https://t.me/WangCai2🇨🇳#%F0%9F%87%AE%F0%9F%87%B3IN_1%7C1.4MB/s
