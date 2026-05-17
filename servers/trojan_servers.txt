@@ -1,4 +1,7 @@
-trojan://humanity@104.18.32.47:443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.multiplydose.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.multiplydose.com#
-trojan://humanity@104.20.6.134:443?path=/assignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#
-trojan://humanity@172.67.180.92:443?security=tls&amp;sni=www.multiplydose.com&amp;fp=chrome&amp;allowInsecure=1&amp;type=ws&amp;host=www.multiplydose.com&amp;path=%2Fassignment#
-trojan://humanity@v1.dabache.top:443?security=tls&amp;type=ws&amp;sni=www.multiplydose.com&amp;path=/assignment&amp;host=www.multiplydose.com#
+trojan://3UThqDZRx2@193.151.150.161:443?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=ir1.iobase.ir#%40appsooner%20%DA%A9%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%F0%9F%95%8A%EF%B8%8F
+trojan://8r%3C%5B9%27l6hAO%238ZQi@172.64.149.54:2096?path=%2Ftr&amp;security=tls&amp;host=Koma-YT.PAGeS.Dev&amp;type=ws&amp;sni=Koma-YT.PAGeS.Dev#filembad-11
+trojan://telegram-id-privatevpns@13.36.26.137:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@15.188.181.239:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@15.236.127.239:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@3.74.67.75:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@63.183.179.231:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
