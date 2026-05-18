@@ -1,1 +1,3 @@
-socks5://Og%3D%3D@121.169.46.116:1090
+socks5://127.0.0.1:10880/#%40Masir_Sefid%20Socks%20For%20Slipnet
+socks5://127.0.0.1:10886/#%40Masir_Sefid%20Socks
+socks5://51.210.111.216:33123?---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---&security=tls&encryption=none&host=nigan.pages.dev&fp=chrome&type=ws&sni=nigan.pages.dev
