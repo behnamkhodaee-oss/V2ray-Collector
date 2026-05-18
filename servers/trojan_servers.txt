@@ -1,1 +1,9 @@
-trojan://2399fe0a-b359-40a9-a3f0-b70c3c177a01@cloudflare-ip.mofashi.ltd:443?type=ws&amp;host=aa.beijng.dpdns.org&amp;path=/?ed=2048&amp;security=tls&amp;sni=aa.beijng.dpdns.org#
+trojan://3UThqDZRx2@193.151.150.161:443?security=tls&amp;insecure=1&amp;headerType=none&amp;type=tcp&amp;allowInsecure=1&amp;sni=ir1.iobase.ir#
+trojan://humanity@www.multiplydose.com:443?path=/assignment&amp;security=tls&amp;insecure=1&amp;fp=chrome&amp;type=ws&amp;allowInsecure=1&amp;sni=www.multiplydose.com#
+trojan://opentunnel.net-english30day@54.37.18.204:443?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=uplod.ir#
+trojan://opentunnel.net-usa30day@15.204.9.172:443?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=uplod.ir#
+trojan://telegram-id-privatevpns@13.38.225.194:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@15.236.132.94:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@15.237.54.100:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@3.64.141.142:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://telegram-id-privatevpns@63.182.26.197:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
