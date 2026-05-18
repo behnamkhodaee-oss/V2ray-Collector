@@ -1,8 +1,4 @@
-socks://91.222.196.8:7071?type=tcp#v2ray_plusz
-socks://Og%3D%3D@127.0.0.1:1080#byiroh
-socks://Og@45.94.213.213:443#@V2RAYENGLISH
-socks://Og@62.220.126.56:30081#@V2RAYENGLISH
-socks://Og@62.220.126.56:30170#@v2ray_plusz
-socks://Og@62.220.126.56:30517#%40V2RAYENGLISH
-socks://Og@62.220.126.92:30871#@v2ray_plusz
-socks://ZXJtaWE6RXJtaWEzNDcyIw@185.231.183.229:80#%40V2RAYENGLISH
+socks://Og@10.37.85.186:43199#@Eag1e_YT
+socks://Og@62.220.126.92:30871#%F0%9F%94%B0%20%40PewezaTech%20%28%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%29
+socks://Og@62.220.126.92:32302#%F0%9F%94%B0%20%40PewezaTech%20%28%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%29
+socks://Og@عددی
