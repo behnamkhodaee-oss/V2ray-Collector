@@ -1,3 +1,6 @@
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@172.64.146.129:443?allowInsecure=1&amp;alpn=http%2F1.1&amp;fp=chrome&amp;host=sni.111000.dynv6.net&amp;path=%2F%3Fproxyip%3Dip.111000.de5.net%3A443&amp;sni=sni.111000.dynv6.net&amp;type=ws#
-trojan://humanity@104.18.16.56:443?host=www.creationlong.org&amp;path=/assignment&amp;sni=www.creationlong.org&amp;type=ws#
-trojan://telegram-id-privatevpns@13.38.225.194:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://823cbccd-3a71-4248-ac3c-3c460de1552d@172.64.53.190:443?sni=snll667.pages.dev&amp;peer=snll667.pages.dev&amp;security=tls#v2ray_dalghak
+trojan://8r%3C%5B9%27l6hAO%238ZQi@46.8.237.174:2053?sni=Koma-YT.PAGeS.Dev&amp;peer=Koma-YT.PAGeS.Dev&amp;security=tls#v2ray_dalghak
+trojan://humanity@104.18.16.56:443?host=www.creationlong.org&amp;path=/assignment&amp;sni=www.creationlong.org&amp;type=ws#[57178]
+trojan://humanity@104.20.6.134:443?path=/assignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#[57163]
+trojan://humanity@v1.dabache.top:443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.multiplydose.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.multiplydose.com#[57160]
+trojan://humanity@v1.dabache.top:443?security=tls&amp;type=ws&amp;sni=www.multiplydose.com&amp;path=/assignment&amp;host=www.multiplydose.com#[57159]
