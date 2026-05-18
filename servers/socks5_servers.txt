@@ -1,1 +1,2 @@
-socks5://51.210.111.216:33123?---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---&security=tls&encryption=none&host=nigan.pages.dev&fp=chrome&type=ws&sni=nigan.pages.dev#
+socks5://206.123.156.189:4589
+socks5://206.123.156.238:14344
