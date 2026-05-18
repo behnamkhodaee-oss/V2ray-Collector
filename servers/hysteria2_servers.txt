@@ -19,4 +19,3 @@ hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@13.250.25.232:443?insecure=1&sni=https://t.
 hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@13.250.60.252:443?insecure=1&sni=https://t.me/WangCai2🇨🇳#%F0%9F%87%B8%F0%9F%87%ACSG_%40WangCai_8%20%232
 hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@47.129.174.18:443?insecure=1&sni=https://t.me/WangCai2🇨🇳#%F0%9F%87%B8%F0%9F%87%ACSG_%40WangCai_8%20%233
 hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@52.77.240.3:443?insecure=1&sni=https://t.me/WangCai2🇨🇳#%F0%9F%87%B8%F0%9F%87%ACSG_%40WangCai_8%20%234
-hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@vpn-us-005.fastervpn.world:443?insecure=1&sni=vpn-us-005.fastervpn.world&obfs-password=#%F0%9F%87%BA%F0%9F%87%B8US_3%7C1.3MB/s
