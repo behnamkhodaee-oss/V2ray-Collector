@@ -626,32 +626,31 @@ async def main():
     for q in REPO_SEARCH_QUERIES:
         if q not in searched_queries:
             search_tasks.append(asyncio.create_task(
-                search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["REPO_SEARCH_PAGES"], search_semaphore, qualifier='pushed')
+                search_github_api(session, q, 'repositories', headers,
+                                  CONFIG_DEFAULTS["REPO_SEARCH_PAGES"],
+                                  search_semaphore, qualifier='pushed')
             ))
 
     for q in CODE_SEARCH_QUERIES:
         if q not in searched_queries:
             search_tasks.append(asyncio.create_task(
-                search_github_api(session, q, 'code', headers, CONFIG_DEFAULTS["CODE_SEARCH_PAGES"], search_semaphore, qualifier='updated')
+                search_github_api(session, q, 'code', headers,
+                                  CONFIG_DEFAULTS["CODE_SEARCH_PAGES"],
+                                  search_semaphore, qualifier='updated')
             ))
-
-    for q in EXTRA_UPDATED_REPO_QUERIES:
-        search_tasks.append(asyncio.create_task(
-            search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["EXTRA_UPDATED_REPO_PAGES"], search_semaphore, qualifier='updated')
-        ))
 
     search_results = []
     for fut in tqdm(asyncio.as_completed(search_tasks), total=len(search_tasks), desc="[Stage 1] Searches"):
         try:
-            res = await fut
-            search_results.append(res)
+            search_results.append(await fut)
         except Exception as e:
             logger.warning(f"Search task error: {e}")
 
     discovered_repo_tuples = {item for res in search_results for item in res if isinstance(item, tuple)}
     discovered_code_urls = {item for res in search_results for item in res if isinstance(item, str)}
+
 else:
-    logger.info("🚫 GitHub Search is disabled")
+    logger.info("🚫 GitHub search disabled")
     search_results = []
     discovered_repo_tuples = set()
     discovered_code_urls = set()
