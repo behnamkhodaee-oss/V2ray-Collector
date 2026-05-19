@@ -1,3 +1,3 @@
-socks://Og%3D%3D@185.239.106.84:1449#%40Hddify
-socks://Og@1.1.1.1:10808#%40ProxyVPN11
-socks://Og@185.239.106.84:1449#%40proxy_kafee
+socks://Og%3D%3D@185.239.106.84:1449#%40NormanV2ray
+socks://Og@185.239.106.84:1449#%40config4k%20_%20%DA%A9%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85
+socks://ZXJtaWE6RXJtaWEzNDcyI0AxODUuMjMxLjE4My4yMjk6ODA=#@ehsawn8
