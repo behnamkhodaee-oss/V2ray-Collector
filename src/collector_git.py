@@ -15,6 +15,8 @@ from tqdm import tqdm
 import backoff
 from typing import Dict, Optional, Set, List, Tuple
 
+ENABLE_GITHUB_SEARCH = False
+
 # ============================
 # ⚙️ بخش ۱: پیکربندی نهایی (ساعتی، توقف خودکار و ذخیره‌ی شاخه‌ها)
 # ============================
@@ -617,45 +619,42 @@ async def main():
         logger.info(f"Core Remaining: {core_remaining}. Max scan: {final_max_scan}")
 
         # --- Stage 1: Search ---
-        logger.info("--- Stage 1: GitHub Search (pushed + updated) ---")
-        search_tasks = []
-        for q in REPO_SEARCH_QUERIES:
-            if q not in searched_queries:
-                search_tasks.append(asyncio.create_task(
-                    search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["REPO_SEARCH_PAGES"], search_semaphore, qualifier='pushed')
-                ))
-        for q in CODE_SEARCH_QUERIES:
-            if q not in searched_queries:
-                search_tasks.append(asyncio.create_task(
-                    search_github_api(session, q, 'code', headers, CONFIG_DEFAULTS["CODE_SEARCH_PAGES"], search_semaphore, qualifier='updated')
-                ))
-        for q in EXTRA_UPDATED_REPO_QUERIES:
+        if ENABLE_GITHUB_SEARCH:
+    logger.info("--- Stage 1: GitHub Search (pushed + updated) ---")
+    search_tasks = []
+
+    for q in REPO_SEARCH_QUERIES:
+        if q not in searched_queries:
             search_tasks.append(asyncio.create_task(
-                search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["EXTRA_UPDATED_REPO_PAGES"], search_semaphore, qualifier='updated')
+                search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["REPO_SEARCH_PAGES"], search_semaphore, qualifier='pushed')
             ))
 
-        logger.info(f"Total search tasks: {len(search_tasks)}")
-        search_results = []
-        for fut in tqdm(asyncio.as_completed(search_tasks), total=len(search_tasks), desc="[Stage 1] Searches"):
-            try:
-                res = await fut
-                search_results.append(res)
-            except Exception as e:
-                logger.warning(f"Search task error: {e}")
+    for q in CODE_SEARCH_QUERIES:
+        if q not in searched_queries:
+            search_tasks.append(asyncio.create_task(
+                search_github_api(session, q, 'code', headers, CONFIG_DEFAULTS["CODE_SEARCH_PAGES"], search_semaphore, qualifier='updated')
+            ))
 
-        for q in REPO_SEARCH_QUERIES:
-            searched_queries.add(q)
-        for q in CODE_SEARCH_QUERIES:
-            searched_queries.add(q)
+    for q in EXTRA_UPDATED_REPO_QUERIES:
+        search_tasks.append(asyncio.create_task(
+            search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["EXTRA_UPDATED_REPO_PAGES"], search_semaphore, qualifier='updated')
+        ))
 
-        discovered_repo_tuples = {item for res in search_results for item in res if isinstance(item, tuple)}
-        discovered_code_urls = {item for res in search_results for item in res if isinstance(item, str)}
-        logger.info(f"Discovered {len(discovered_repo_tuples)} repos, {len(discovered_code_urls)} code URLs.")
+    search_results = []
+    for fut in tqdm(asyncio.as_completed(search_tasks), total=len(search_tasks), desc="[Stage 1] Searches"):
+        try:
+            res = await fut
+            search_results.append(res)
+        except Exception as e:
+            logger.warning(f"Search task error: {e}")
 
-        if CORE_LIMIT_REACHED:
-            logger.warning("Core limit reached before scanning. Skipping Stage 2.")
-            source_urls = set(discovered_code_urls)
-        else:
+    discovered_repo_tuples = {item for res in search_results for item in res if isinstance(item, tuple)}
+    discovered_code_urls = {item for res in search_results for item in res if isinstance(item, str)}
+else:
+    logger.info("🚫 GitHub Search is disabled")
+    search_results = []
+    discovered_repo_tuples = set()
+    discovered_code_urls = set()
             # --- Stage 2: Scan repos with hourly filter ---
             logger.info("--- Stage 2: Scanning Repos (Hourly Filter Active) ---")
             source_urls = set(discovered_code_urls)
