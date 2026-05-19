@@ -619,86 +619,110 @@ async def main():
         logger.info(f"Core Remaining: {core_remaining}. Max scan: {final_max_scan}")
 
         # --- Stage 1: Search ---
-        if ENABLE_GITHUB_SEARCH:
+if ENABLE_GITHUB_SEARCH:
     logger.info("--- Stage 1: GitHub Search (pushed + updated) ---")
     search_tasks = []
 
     for q in REPO_SEARCH_QUERIES:
         if q not in searched_queries:
             search_tasks.append(asyncio.create_task(
-                search_github_api(session, q, 'repositories', headers,
-                                  CONFIG_DEFAULTS["REPO_SEARCH_PAGES"],
-                                  search_semaphore, qualifier='pushed')
+                search_github_api(
+                    session, q, 'repositories', headers,
+                    CONFIG_DEFAULTS["REPO_SEARCH_PAGES"],
+                    search_semaphore, qualifier='pushed'
+                )
             ))
 
     for q in CODE_SEARCH_QUERIES:
         if q not in searched_queries:
             search_tasks.append(asyncio.create_task(
-                search_github_api(session, q, 'code', headers,
-                                  CONFIG_DEFAULTS["CODE_SEARCH_PAGES"],
-                                  search_semaphore, qualifier='updated')
+                search_github_api(
+                    session, q, 'code', headers,
+                    CONFIG_DEFAULTS["CODE_SEARCH_PAGES"],
+                    search_semaphore, qualifier='updated'
+                )
             ))
 
     search_results = []
-    for fut in tqdm(asyncio.as_completed(search_tasks), total=len(search_tasks), desc="[Stage 1] Searches"):
+    for fut in tqdm(asyncio.as_completed(search_tasks),
+                    total=len(search_tasks),
+                    desc="[Stage 1] Searches"):
         try:
             search_results.append(await fut)
         except Exception as e:
             logger.warning(f"Search task error: {e}")
 
-    discovered_repo_tuples = {item for res in search_results for item in res if isinstance(item, tuple)}
-    discovered_code_urls = {item for res in search_results for item in res if isinstance(item, str)}
+    discovered_repo_tuples = {
+        item for res in search_results for item in res if isinstance(item, tuple)
+    }
+    discovered_code_urls = {
+        item for res in search_results for item in res if isinstance(item, str)
+    }
 
 else:
     logger.info("🚫 GitHub search disabled")
     search_results = []
     discovered_repo_tuples = set()
     discovered_code_urls = set()
-            # --- Stage 2: Scan repos with hourly filter ---
-            logger.info("--- Stage 2: Scanning Repos (Hourly Filter Active) ---")
-            source_urls = set(discovered_code_urls)
-            semaphores = {'fetch': fetch_semaphore, 'search': search_semaphore}
 
-            manual_to_scan = [(o, r) for o, r in MANUAL_REPOS_TO_SCAN if f"{o}/{r}" not in scanned_manual_repos]
-            if manual_to_scan and not CORE_LIMIT_REACHED:
-                manual_tasks = [asyncio.create_task(check_and_scan_repo(session, o, r, headers, semaphores, source_urls)) for o, r in manual_to_scan]
-                for fut in tqdm(asyncio.as_completed(manual_tasks), total=len(manual_tasks), desc="[Stage 2] Manual Repos"):
-                    try:
-                        await fut
-                    except Exception as e:
-                        logger.warning(f"Manual repo error: {e}")
-                    if CORE_LIMIT_REACHED:
-                        logger.warning("Core limit reached during manual scan.")
-                        break
-                for o, r in manual_to_scan:
-                    scanned_manual_repos.add(f"{o}/{r}")
 
-            discovered_only = discovered_repo_tuples - set(MANUAL_REPOS_TO_SCAN)
-            repos_to_scan = list(discovered_only)[:final_max_scan]
-            if repos_to_scan and not CORE_LIMIT_REACHED:
-                logger.info(f"Scanning {len(repos_to_scan)} discovered repos")
-                repo_tasks = [asyncio.create_task(check_and_scan_repo(session, o, r, headers, semaphores, source_urls)) for o, r in repos_to_scan]
-                for fut in tqdm(asyncio.as_completed(repo_tasks), total=len(repo_tasks), desc="[Stage 2] Discovered Repos"):
-                    try:
-                        await fut
-                    except Exception as e:
-                        logger.warning(f"Discovered repo error: {e}")
-                    if CORE_LIMIT_REACHED:
-                        logger.warning("Core limit reached during discovered scan.")
-                        break
+# --- Stage 2: Scan repos with hourly filter ---
+logger.info("--- Stage 2: Scanning Repos (Hourly Filter Active) ---")
+source_urls = set(discovered_code_urls)
+semaphores = {'fetch': fetch_semaphore, 'search': search_semaphore}
 
-            await save_checkpoint(processed_urls_session, searched_queries, scanned_manual_repos)
+manual_to_scan = [
+    (o, r) for o, r in MANUAL_REPOS_TO_SCAN
+    if f"{o}/{r}" not in scanned_manual_repos
+]
 
-            # ذخیره‌ی کش لینک‌های raw برای استفاده در اجراهای بعدی (فقط در روزانه)
-            if run_mode == "daily":
-                with open("data/raw_urls_cache.json", "w") as f:
-                    json.dump(list(source_urls), f)
-                logger.info(f"💾 Saved {len(source_urls)} raw URLs to raw_urls_cache.json")
+if manual_to_scan and not CORE_LIMIT_REACHED:
+    manual_tasks = [
+        asyncio.create_task(
+            check_and_scan_repo(session, o, r, headers, semaphores, source_urls)
+        )
+        for o, r in manual_to_scan
+    ]
 
-        logger.info(f"Total source URLs (before filtering): {len(source_urls)}")
+    for fut in tqdm(asyncio.as_completed(manual_tasks),
+                    total=len(manual_tasks),
+                    desc="[Stage 2] Manual Repos"):
+        try:
+            await fut
+        except Exception as e:
+            logger.warning(f"Manual repo error: {e}")
+        if CORE_LIMIT_REACHED:
+            logger.warning("Core limit reached during manual scan.")
+            break
 
-        # --- برای آمار مخازن ---
-        repo_stats: Dict[str, int] = {}
+    for o, r in manual_to_scan:
+        scanned_manual_repos.add(f"{o}/{r}")
+
+discovered_only = discovered_repo_tuples - set(MANUAL_REPOS_TO_SCAN)
+repos_to_scan = list(discovered_only)[:final_max_scan]
+
+if repos_to_scan and not CORE_LIMIT_REACHED:
+    logger.info(f"Scanning {len(repos_to_scan)} discovered repos")
+
+    repo_tasks = [
+        asyncio.create_task(
+            check_and_scan_repo(session, o, r, headers, semaphores, source_urls)
+        )
+        for o, r in repos_to_scan
+    ]
+
+    for fut in tqdm(asyncio.as_completed(repo_tasks),
+                    total=len(repo_tasks),
+                    desc="[Stage 2] Discovered Repos"):
+        try:
+            await fut
+        except Exception as e:
+            logger.warning(f"Discovered repo error: {e}")
+        if CORE_LIMIT_REACHED:
+            logger.warning("Core limit reached during discovered scan.")
+            break
+
+await save_checkpoint(processed_urls_session, searched_queries, scanned_manual_repos)
 
         # --- Stage 3: Process URLs ---
         logger.info("--- Stage 3: Processing URLs ---")
