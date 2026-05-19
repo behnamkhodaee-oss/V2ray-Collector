@@ -575,17 +575,18 @@ async def process_url(session, url, headers, processed_urls_session, cache, sema
             await asyncio.gather(*tasks, return_exceptions=True)
 
 # ============================
-# 🚀 بخش ۹: تابع اصلی (هماهنگ با فیلتر ساعتی)
+# 🚀 بخش ۹: تابع اصلی (GitHub Search خاموش)
 # ============================
 async def main():
-    logger.info("🚀 Starting Optimized Collector (Hourly Filter + Auto-Stop)")
+    logger.info("🚀 Starting Optimized Collector (GitHub Search DISABLED)")
     start_time = time.time()
 
-    # --- خواندن حالت اجرا فقط یک بار ---
+    # --- حالت اجرا ---
     run_mode = os.getenv("RUN_MODE", "daily")
     max_age_env = os.getenv("MAX_AGE_HOURS")
     if max_age_env is not None:
         CONFIG_DEFAULTS["MAX_AGE_HOURS"] = float(max_age_env)
+
     token = get_github_token()
     headers = {
         "Accept": "application/vnd.github.v3+json",
@@ -602,183 +603,170 @@ async def main():
     searched_queries = set(checkpoint.get("searched_queries", []))
     scanned_manual_repos = set(checkpoint.get("scanned_manual_repos", []))
 
-    # در اجرای ساعتی و ۱۵‌دقیقه‌ای، مخازن دستی هر بار دوباره بررسی شوند
     if run_mode in ("hourly", "frequent"):
         scanned_manual_repos = set()
 
     connector = aiohttp.TCPConnector(limit=CONFIG_DEFAULTS["AIOHTTP_CONNECTION_LIMIT"])
+
     async with aiohttp.ClientSession(connector=connector) as session:
 
         await check_rate_limit(session, headers, 'core', force=True)
+
         core_remaining = RATE_STATE['core']['remaining']
         core_budget_for_scan = core_remaining - (CONFIG_DEFAULTS["TARGET_CORE_CONSUMPTION"] * 0.3)
         dynamic_max_scan = max(0, int(core_budget_for_scan / CONFIG_DEFAULTS["CORE_PER_REPO_ESTIMATE"]))
         final_max_scan = min(CONFIG_DEFAULTS["MAX_DISCOVERED_REPOS_TO_SCAN"], dynamic_max_scan)
+
         logger.info(f"Core Remaining: {core_remaining}. Max scan: {final_max_scan}")
 
-        # --- Stage 1: Search ---
-        logger.info("--- Stage 1: GitHub Search (pushed + updated) ---")
-        search_tasks = []
-        for q in REPO_SEARCH_QUERIES:
-            if q not in searched_queries:
-                search_tasks.append(asyncio.create_task(
-                    search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["REPO_SEARCH_PAGES"], search_semaphore, qualifier='pushed')
-                ))
-        for q in CODE_SEARCH_QUERIES:
-            if q not in searched_queries:
-                search_tasks.append(asyncio.create_task(
-                    search_github_api(session, q, 'code', headers, CONFIG_DEFAULTS["CODE_SEARCH_PAGES"], search_semaphore, qualifier='updated')
-                ))
-        for q in EXTRA_UPDATED_REPO_QUERIES:
-            search_tasks.append(asyncio.create_task(
-                search_github_api(session, q, 'repositories', headers, CONFIG_DEFAULTS["EXTRA_UPDATED_REPO_PAGES"], search_semaphore, qualifier='updated')
-            ))
-
-        logger.info(f"Total search tasks: {len(search_tasks)}")
+        # ======================================================
+        # 🚫 Stage 1: GitHub Search DISABLED
+        # ======================================================
+        logger.info("--- Stage 1: SKIPPED (GitHub Search Disabled) ---")
         search_results = []
-        for fut in tqdm(asyncio.as_completed(search_tasks), total=len(search_tasks), desc="[Stage 1] Searches"):
-            try:
-                res = await fut
-                search_results.append(res)
-            except Exception as e:
-                logger.warning(f"Search task error: {e}")
 
-        for q in REPO_SEARCH_QUERIES:
-            searched_queries.add(q)
-        for q in CODE_SEARCH_QUERIES:
-            searched_queries.add(q)
+        discovered_repo_tuples = set()
+        discovered_code_urls = set()
 
-        discovered_repo_tuples = {item for res in search_results for item in res if isinstance(item, tuple)}
-        discovered_code_urls = {item for res in search_results for item in res if isinstance(item, str)}
-        logger.info(f"Discovered {len(discovered_repo_tuples)} repos, {len(discovered_code_urls)} code URLs.")
+        logger.info("🔕 GitHub search is turned off. No repositories will be discovered from search API.")
 
-        if CORE_LIMIT_REACHED:
-            logger.warning("Core limit reached before scanning. Skipping Stage 2.")
-            source_urls = set(discovered_code_urls)
-        else:
-            # --- Stage 2: Scan repos with hourly filter ---
-            logger.info("--- Stage 2: Scanning Repos (Hourly Filter Active) ---")
-            source_urls = set(discovered_code_urls)
-            semaphores = {'fetch': fetch_semaphore, 'search': search_semaphore}
+        # ======================================================
+        # Stage 2: فقط منابع دستی
+        # ======================================================
+        logger.info("--- Stage 2: Scanning Manual Repos Only ---")
 
-            manual_to_scan = [(o, r) for o, r in MANUAL_REPOS_TO_SCAN if f"{o}/{r}" not in scanned_manual_repos]
-            if manual_to_scan and not CORE_LIMIT_REACHED:
-                manual_tasks = [asyncio.create_task(check_and_scan_repo(session, o, r, headers, semaphores, source_urls)) for o, r in manual_to_scan]
-                for fut in tqdm(asyncio.as_completed(manual_tasks), total=len(manual_tasks), desc="[Stage 2] Manual Repos"):
-                    try:
-                        await fut
-                    except Exception as e:
-                        logger.warning(f"Manual repo error: {e}")
-                    if CORE_LIMIT_REACHED:
-                        logger.warning("Core limit reached during manual scan.")
-                        break
-                for o, r in manual_to_scan:
-                    scanned_manual_repos.add(f"{o}/{r}")
+        source_urls = set()
+        semaphores = {'fetch': fetch_semaphore, 'search': search_semaphore}
 
-            discovered_only = discovered_repo_tuples - set(MANUAL_REPOS_TO_SCAN)
-            repos_to_scan = list(discovered_only)[:final_max_scan]
-            if repos_to_scan and not CORE_LIMIT_REACHED:
-                logger.info(f"Scanning {len(repos_to_scan)} discovered repos")
-                repo_tasks = [asyncio.create_task(check_and_scan_repo(session, o, r, headers, semaphores, source_urls)) for o, r in repos_to_scan]
-                for fut in tqdm(asyncio.as_completed(repo_tasks), total=len(repo_tasks), desc="[Stage 2] Discovered Repos"):
-                    try:
-                        await fut
-                    except Exception as e:
-                        logger.warning(f"Discovered repo error: {e}")
-                    if CORE_LIMIT_REACHED:
-                        logger.warning("Core limit reached during discovered scan.")
-                        break
+        manual_to_scan = [
+            (o, r) for o, r in MANUAL_REPOS_TO_SCAN
+            if f"{o}/{r}" not in scanned_manual_repos
+        ]
 
-            await save_checkpoint(processed_urls_session, searched_queries, scanned_manual_repos)
+        if manual_to_scan:
+            manual_tasks = [
+                asyncio.create_task(
+                    check_and_scan_repo(session, o, r, headers, semaphores, source_urls)
+                )
+                for o, r in manual_to_scan
+            ]
 
-            # ذخیره‌ی کش لینک‌های raw برای استفاده در اجراهای بعدی (فقط در روزانه)
-            if run_mode == "daily":
-                with open("data/raw_urls_cache.json", "w") as f:
-                    json.dump(list(source_urls), f)
-                logger.info(f"💾 Saved {len(source_urls)} raw URLs to raw_urls_cache.json")
+            for fut in tqdm(asyncio.as_completed(manual_tasks),
+                            total=len(manual_tasks),
+                            desc="[Stage 2] Manual Repos"):
+                try:
+                    await fut
+                except Exception as e:
+                    logger.warning(f"Manual repo error: {e}")
 
-        logger.info(f"Total source URLs (before filtering): {len(source_urls)}")
+            for o, r in manual_to_scan:
+                scanned_manual_repos.add(f"{o}/{r}")
 
-        # --- برای آمار مخازن ---
+        await save_checkpoint(processed_urls_session, searched_queries, scanned_manual_repos)
+
+        if run_mode == "daily":
+            with open("data/raw_urls_cache.json", "w") as f:
+                json.dump(list(source_urls), f)
+
+        logger.info(f"Total source URLs from manual repos: {len(source_urls)}")
+
+        # ======================================================
+        # Stage 3: Processing URLs
+        # ======================================================
         repo_stats: Dict[str, int] = {}
 
-        # --- Stage 3: Process URLs ---
         logger.info("--- Stage 3: Processing URLs ---")
+
         urls_to_process = []
         for u in source_urls:
             if 'github.com' not in u and 'raw.githubusercontent.com' not in u:
                 continue
-            if run_mode in ("hourly", "frequent"):
-                pass
-            else:
+
+            if run_mode not in ("hourly", "frequent"):
                 if u in processed_urls_session:
                     continue
-                if cache.is_cached(u) or await db_is_url_processed(u, CONFIG_DEFAULTS["CACHE_EXPIRY_DAYS"]):
+                if cache.is_cached(u) or await db_is_url_processed(
+                    u, CONFIG_DEFAULTS["CACHE_EXPIRY_DAYS"]
+                ):
                     continue
+
             urls_to_process.append(u)
 
         logger.info(f"New URLs to process: {len(urls_to_process)}")
+
         batch_size = CONFIG_DEFAULTS["BATCH_SIZE"]
+
         for i in range(0, len(urls_to_process), batch_size):
-            batch = urls_to_process[i:i+batch_size]
-            tasks = [asyncio.create_task(process_url(session, url, headers, processed_urls_session, cache, fetch_semaphore, 0, repo_stats))
-                     for url in batch]
-            for fut in tqdm(asyncio.as_completed(tasks), total=len(tasks), desc=f"[Stage 3] Batch {i//batch_size + 1}"):
+            batch = urls_to_process[i:i + batch_size]
+
+            tasks = [
+                asyncio.create_task(
+                    process_url(session, url, headers,
+                                processed_urls_session,
+                                cache,
+                                fetch_semaphore,
+                                0,
+                                repo_stats)
+                )
+                for url in batch
+            ]
+
+            for fut in tqdm(asyncio.as_completed(tasks),
+                            total=len(tasks),
+                            desc=f"[Stage 3] Batch {i // batch_size + 1}"):
                 try:
                     await fut
                 except Exception as e:
                     logger.debug(f"Process error: {e}")
+
             await save_checkpoint(processed_urls_session, searched_queries, scanned_manual_repos)
 
-        # --- بروزرسانی گزارش مخازن ---
-        repo_report_file = "data/repo_report.txt"   # در ریشهٔ پروژه
+        # ======================================================
+        # Repo report
+        # ======================================================
+        repo_report_file = "data/repo_report.txt"
         repo_history = {}
+
         if os.path.exists(repo_report_file):
             with open(repo_report_file, "r", encoding="utf-8") as f:
                 for line in f:
                     line = line.strip()
-                    if not line or ':' not in line:
+                    if ':' not in line:
                         continue
                     key, counts = line.split(':', 1)
-                    key = key.strip()
-                    counts = [c.strip() for c in counts.split(',') if c.strip().isdigit()]
-                    repo_history[key] = counts
+                    repo_history[key] = counts.split(',')
 
         for key, count in repo_stats.items():
-            if key in repo_history:
-                repo_history[key].append(str(count))
-            else:
-                prev_len = len(next(iter(repo_history.values()))) if repo_history else 0
-                repo_history[key] = ['0'] * prev_len + [str(count)]
-
-        for key in repo_history:
-            if key not in repo_stats:
-                repo_history[key].append('0')
+            repo_history.setdefault(key, []).append(str(count))
 
         with open(repo_report_file, "w", encoding="utf-8") as f:
-            f.write(f"GitHub Repo Report — last update: {datetime.now(timezone.utc).isoformat()}\n\n")
+            f.write(f"GitHub Repo Report — {datetime.now(timezone.utc).isoformat()}\n\n")
             for key in sorted(repo_history.keys()):
-                counts_str = ", ".join(repo_history[key])
-                f.write(f"{key}: {counts_str}\n")
-        logger.info(f"📊 گزارش مخازن در {repo_report_file} بروز شد.")
+                f.write(f"{key}: {', '.join(repo_history[key])}\n")
 
-    # --- Stage 4: Final Export ---
+        logger.info(f"📊 Repo report updated: {repo_report_file}")
+
+    # ======================================================
+    # Stage 4: Final Export
+    # ======================================================
     logger.info("--- Stage 4: Final Export ---")
+
     cache._save_cache()
     all_configs = await db_get_all_configs()
     unique_configs = sorted({c.strip() for c in all_configs if c.strip()})
-    logger.info(f"✅ Total unique configs in DB: {len(unique_configs)}")
-    
-    if CORE_LIMIT_REACHED:
-        logger.warning("⛔ Script finished early because Core limit was reached.")
-    else:
-        logger.info("✅ Script completed normally without hitting Core limit.")
 
-    # --- مرحله نهایی: ادغام و تفکیک پروتکل‌ها ---
+    logger.info(f"✅ Total configs in DB: {len(unique_configs)}")
+
+    if CORE_LIMIT_REACHED:
+        logger.warning("⛔ Stopped early due to core limit.")
+    else:
+        logger.info("✅ Completed normally.")
+
     await finalize_output()
 
     logger.info(f"--- Finished in {int(time.time() - start_time)}s ---")
     logger.info(f"Estimated Core used: {TOTAL_CORE_USED}")
+
     os._exit(0)
 
 # ============================
