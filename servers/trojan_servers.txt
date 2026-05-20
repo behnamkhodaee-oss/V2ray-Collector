@@ -1,5 +1,3 @@
-trojan://1111@v2ngfast-v2ngfast-v2ngfast-v2ngfast.ixobadf.workers.dev:8443?sni=v2ngfast-v2ngfast-v2ngfast-v2ngfast.ixobadf.workers.dev&amp;peer=v2ngfast-v2ngfast-v2ngfast-v2ngfast.ixobadf.workers.dev&amp;security=tls#
-trojan://2399fe0a-b359-40a9-a3f0-b70c3c177a01@cloudflare-ip.mofashi.ltd:443?type=ws&amp;host=aa.beijng.dpdns.org&amp;path=/?ed=2048&amp;security=tls&amp;sni=aa.beijng.dpdns.org#v2ray_dalghak
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.17.101.139:443?allowInsecure=1&amp;alpn=http%2F1.1&amp;ed=2560&amp;eh=Sec-WebSocket-Protocol&amp;host=sni.111000.dynv6.net&amp;path=%2F%3Fproxyip%3Dip.111000.de5.net%253A443&amp;sni=sni.111000.dynv6.net&amp;type=ws#v2ray_dalghak
-trojan://bpb-trojan@www.speedtest.net:443?sni=10-bpb-wORkER-paNel.pAGEs.DeV&amp;peer=10-bpb-wORkER-paNel.pAGEs.DeV&amp;security=tls#
-trojan://humanity@104.19.229.21:443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.creationlong.org&amp;fp=chrome&amp;type=ws&amp;allowInsecure=1&amp;sni=www.creationlong.org#v2ray_dalghak
+trojan://1111@v2ngfast-v2ngfast-v2ngfast-v2ngfast.ixobadf.workers.dev:8443?sni=v2ngfast-v2ngfast-v2ngfast-v2ngfast.ixobadf.workers.dev&amp;peer=v2ngfast-v2ngfast-v2ngfast-v2ngfast.ixobadf.workers.dev&amp;security=tls#[59106]
+trojan://bpb-trojan@www.speedtest.net:443?sni=10-bpb-wORkER-paNel.pAGEs.DeV&amp;peer=10-bpb-wORkER-paNel.pAGEs.DeV&amp;security=tls#[59107]
+trojan://humanity@104.19.229.21:443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.creationlong.org&amp;fp=chrome&amp;type=ws&amp;allowInsecure=1&amp;sni=www.creationlong.org#[59089]
