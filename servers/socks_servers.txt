@@ -1,2 +1,7 @@
-socks://Og@185.239.106.84:1449#%40Shomarrreh
-socks://dXNlcjE0OmVFMXRUYkIzcVE@mseu8.fastspeed.cfd:7854#%E2%9C%85%EF%B8%8F%D8%A8%DB%8C%D8%A7%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%3A%20Shomarrreh%40
+socks://Og@185.239.106.84:1449#%40Moft_Vpn
+socks://Og@185.8.172.128:443#%E2%8F%B3%40Proxy_Vpney%20%285%29
+socks://Og@62.220.126.56:30081#%40Proxy_Vpney%20v%2Bp%20%286%29
+socks://Og@62.220.126.92:30376#%E2%8F%B3%40Proxy_Vpney%20%283%29
+socks://Og@91.222.196.8:7071#%E2%8F%B3%40Proxy_Vpney%20%285%29
+socks://Og@94.101.176.90:10808#%E2%8F%B3%40Proxy_Vpney%20%281%29
+socks://dXNlcjE0OmVFMXRUYkIzcVE@mseu8.fastspeed.cfd:7854#%40Zed_NetMeli%20ViP
