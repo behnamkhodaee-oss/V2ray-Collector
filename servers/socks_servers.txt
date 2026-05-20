@@ -1,2 +1,2 @@
-socks://Og%3D%3D@185.239.106.84:1449#v2ray_plusz
-socks://Og==@192.168.1.147:46597#ShirOKhorshid-MatinSenPIi
+socks://Og@193.242.125.88:8052#%40FastNetTools
+socks://dXNlcjE0OmVFMXRUYkIzcVE@mseu8.fastspeed.cfd:7854#%40FastNetTools
