@@ -1,2 +1,1 @@
-socks://Og%3D%3D@185.239.106.84:1449#%40V2rayNG_Cafe
-socks://Og@85.133.217.119:10808#%40config4k
+socks://Og@85.133.217.119:10808#%40FastNetTools
