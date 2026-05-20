@@ -1,3 +1,4 @@
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@162.159.36.20:443?allowInsecure=1&amp;alpn=http%2F1.1&amp;host=sni.111000.dynv6.net&amp;path=%2F%3Fproxyip%3Dip.111000.de5.net%3A443&amp;sni=sni.111000.dynv6.net&amp;type=ws#v2ray_dalghak
-trojan://humanity@172.64.152.23:443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.multiplydose.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.multiplydose.com#v2ray_dalghak
-trojan://humanity@172.64.152.23:443?security=tls&amp;sni=www.creationlong.org&amp;allowInsecure=1&amp;type=ws&amp;host=www.creationlong.org&amp;path=%2Fassignment#v2ray_dalghak
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.17.101.139:443?allowInsecure=1&amp;alpn=http%2F1.1&amp;ed=2560&amp;eh=Sec-WebSocket-Protocol&amp;host=sni.111000.dynv6.net&amp;path=%2F%3Fproxyip%3Dip.111000.de5.net%253A443&amp;sni=sni.111000.dynv6.net&amp;type=ws#v2ray_dalghak
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@162.159.36.20:443?allowInsecure=1&amp;alpn=http%2F1.1&amp;host=sni.111000.dynv6.net&amp;path=%2F%3Fproxyip%3Dip.111000.de5.net%3A443&amp;sni=sni.111000.dynv6.net&amp;type=ws#[58954]
+trojan://humanity@104.19.229.21:443?path=%2Fassignment&amp;security=tls&amp;host=www.creationlong.org&amp;fp=safari&amp;type=ws&amp;sni=www.creationlong.org#%F0%9F%87%B5%F0%9F%87%B1%20t.me%2FNatrixo%20AA
+trojan://humanity@104.19.229.21:443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.creationlong.org&amp;fp=chrome&amp;type=ws&amp;allowInsecure=1&amp;sni=www.creationlong.org#v2ray_dalghak
