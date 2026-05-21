@@ -1,2 +1,2 @@
-socks://Og@185.239.106.84:1449#%40proxy_kafee
-socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw@91.222.196.8:7071#%40proxy_kafee%20%7C%20%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%DB%8C
+socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw@91.222.196.8:7071#@Hddify
+socks://dXNlcjE0OmVFMXRUYkIzcVE@mseu8.fastspeed.cfd:7854#%40Zed_NetMeli%20ViP
