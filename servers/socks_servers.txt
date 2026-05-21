@@ -1,6 +1,4 @@
-socks://Og@171.22.24.184:1080#%40ProxyAnonymous
-socks://Og@178.131.140.103:1080#%40ProxyAnonymous
-socks://Og@185.239.106.84:1449#%40vpnbaz%20%7C%20%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%DB%8C
-socks://Og@85.133.217.119:10808#
-socks://Og@94.182.251.124:5443#%40FastNetTools
-socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw@91.222.196.8:7071#%40UnNurmal%20%7C%20%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%DB%8C
+socks://Og@171.22.24.184:1080#%40oliver_soul
+socks://Og@178.131.140.103:1080#
+socks://Og@85.133.217.119:10808#%40Shomarrreh
+socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw@91.222.196.8:7071#%40Shomarrreh
