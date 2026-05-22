@@ -1,4 +1,6 @@
-socks://Og@171.22.24.184:1080#%40UnNurmal
-socks://Og@178.131.140.103:1080#%40UnNurmal
-socks://Og@85.133.217.119:10808#
-socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw@91.222.196.8:7071#%40Shomarrreh%20%7C%201%20%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%DB%8C
+socks://193.242.125.88:8052?type=tcp#%40v2ray_plusz
+socks://Og@171.22.24.184:1080#
+socks://Og@178.131.140.103:1080#
+socks://Og@81.12.24.237:32114#%40Shomarrreh
+socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw@91.222.196.8:7071#%40Shomarrreh
+socks://dXNlcjE0OmVFMXRUYkIzcVE@mseu8.fastspeed.cfd:7854#%40Zed_NetMeli%20ViP
