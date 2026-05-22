@@ -1,1 +1,10 @@
-trojan://humanity@2.144.2.245:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#filembad-12
+trojan://045a2a7a27ffbef5@185.165.119.254:443?type=xhttp&amp;path=%2F&amp;host=&amp;mode=auto&amp;security=none#%40Vpn_jet7
+trojan://162534@142.91.108.54:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;allowInsecure=1&amp;sni=cchh2.pages.dev&amp;type=ws&amp;host=cchh2.pages.dev&amp;path=/?ed=2560&amp;https://t.me/WangCai2
+trojan://162534@142.91.108.54:443?allowInsecure=1&amp;sni=cchh2.pages.dev&amp;type=ws&amp;host=cchh2.pages.dev&amp;path=/?ed=2560&amp;https://t.me/WangCai2
+trojan://162534@156.246.94.155:8443?sni=cchh2.pages.dev&amp;type=ws&amp;host=cchh2.pages.dev&amp;path=/?ed=2560&amp;https://t.me/WangCai2
+trojan://2Bb8zvNNJd@snappfood.ir:80?path=%2Fmargbaaramricas&amp;security=none&amp;host=wsphan.q69-cloud.ir&amp;type=ws#%40configmax
+trojan://9WkZqJmyKk@dtspace.mastershance.ir:80?type=ws&amp;security=none&amp;path=%2Fwikipediad#%F0%9F%87%AE%F0%9F%87%B727058%20%7C%20%E2%9A%A1%EF%B8%8FTelegram%20%3D%20t.me%2FSOSkeyNET
+trojan://bpb-trojan@172.67.180.227:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;type=ws&amp;security=tls&amp;sni=mashdt.pages.dev&amp;host=mashdt.pages.dev&amp;path=/tr?ed=2560#@GozargahAzad|
+trojan://bpb-trojan@172.67.180.227:443?type=ws&amp;security=tls&amp;sni=mashdt.pages.dev&amp;host=mashdt.pages.dev&amp;path=/tr?ed=2560#
+trojan://humanity@193.151.152.73:40443?path=%2Fassignment&amp;security=tls&amp;host=www.ignitelimit.com&amp;type=ws&amp;sni=www.ignitelimit.com#%40configmax
+trojan://humanity@2.144.2.245:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#%40filembad
