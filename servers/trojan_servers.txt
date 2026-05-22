@@ -1,2 +1,6 @@
-trojan://9WkZqJmyKk@dtspace.mastershance.ir:80?type=ws&amp;security=none&amp;path=%2Fwikipediad#
-trojan://telegram-id-privatevpns@15.188.165.183:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#
+trojan://733a3ab1-5ad0-4f09-96ea-071c1f2b9176@94.183.173.165:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;path=%2F%3Fed%3D2048&amp;security=tls&amp;fp=chrome&amp;type=ws&amp;sni=morning-glitter-3e3b.gooorb-d.workers.dev#@GozargahAzad|
+trojan://733a3ab1-5ad0-4f09-96ea-071c1f2b9176@94.183.173.165:443?path=%2F%3Fed%3D2048&amp;security=tls&amp;fp=chrome&amp;type=ws&amp;sni=morning-glitter-3e3b.gooorb-d.workers.dev#filembad-8
+trojan://humanity@104.20.6.134:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;path=/assignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#@GozargahAzad|
+trojan://humanity@104.20.6.134:443?path=/assignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#
+trojan://humanity@2.144.2.245:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#https://t.me/Configir98
+trojan://humanity@2.144.6.222:40443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#NormanV2ray-12
