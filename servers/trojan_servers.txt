@@ -1,7 +1,5 @@
-trojan://733a3ab1-5ad0-4f09-96ea-071c1f2b9176@94.183.173.165:443?path=%2F%3Fed%3D2048&amp;security=tls&amp;fp=chrome&amp;type=ws&amp;sni=morning-glitter-3e3b.gooorb-d.workers.dev#%40filembad
-trojan://9WkZqJmyKk@dtspace.mastershance.ir:80?type=ws&amp;security=none&amp;path=%2Fwikipediad#%F0%9F%87%AE%F0%9F%87%B727058%20%7C%20%E2%9A%A1%EF%B8%8FTelegram%20%3D%20t.me%2FSOSkeyNET
-trojan://bpb-trojan@172.67.180.227:443?type=ws&amp;security=tls&amp;sni=mashdt.pages.dev&amp;host=mashdt.pages.dev&amp;path=/tr?ed=2560#[61098]
-trojan://humanity@104.20.6.134:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;path=%2Fassignment&amp;security=tls&amp;alpn=http%2F1.1&amp;insecure=0&amp;host=www.calmloud.com&amp;fp=chrome&amp;type=ws&amp;allowInsecure=0&amp;sni=www.calmloud.com#@GozargahAzad|
-trojan://humanity@104.20.6.134:443?path=%2Fassignment&amp;security=tls&amp;alpn=http%2F1.1&amp;insecure=0&amp;host=www.calmloud.com&amp;fp=chrome&amp;type=ws&amp;allowInsecure=0&amp;sni=www.calmloud.com#
-trojan://humanity@2.144.2.245:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#%40filembad
-trojan://humanity@www.calmlunch.com:443?allowInsecure=1&amp;sni=www.calmlunch.com&amp;type=ws&amp;path=%2Fassignment#v2ray_dalghak
+trojan://2Bb8zvNNJd@snappfood.ir:80?path=%2Fmargbaaramricas&amp;security=none&amp;host=wsphan.q69-cloud.ir&amp;type=ws#%40configmax
+trojan://bpb-trojan@172.67.180.227:443?type=ws&amp;security=tls&amp;sni=mashdt.pages.dev&amp;host=mashdt.pages.dev&amp;path=/tr?ed=2560#%F0%9F%87%A9%F0%9F%87%AA%20t.me%2FNatrixo%20BB
+trojan://humanity@104.20.6.134:443?path=%2Fassignment&amp;security=tls&amp;alpn=http%2F1.1&amp;insecure=0&amp;host=www.calmloud.com&amp;fp=chrome&amp;type=ws&amp;allowInsecure=0&amp;sni=www.calmloud.com#v2ray_dalghak
+trojan://humanity@193.151.152.73:40443?path=%2Fassignment&amp;security=tls&amp;host=www.ignitelimit.com&amp;type=ws&amp;sni=www.ignitelimit.com#%40configmax
+trojan://humanity@2.144.2.245:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#byiroh
