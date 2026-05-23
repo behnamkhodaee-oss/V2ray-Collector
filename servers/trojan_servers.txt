@@ -1,7 +1,6 @@
-trojan://635340b47bddf8f41c123dc6f2b5f7ce@18.162.49.218:53018?allowInsecure=1&amp;sni=www.nintendogames.net#v2ray_dalghak
-trojan://8r%3C%5B9%27l6hAO%238ZQi@104.19.229.21:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;type=ws&amp;security=tls&amp;path=%2Ftr&amp;host=Koma-YT.PAGeS.Dev&amp;sni=Koma-YT.PAGeS.Dev&amp;allowInsecure=1#@GozargahAzad|
-trojan://8r%3C%5B9%27l6hAO%238ZQi@104.19.229.21:443?type=ws&amp;security=tls&amp;path=%2Ftr&amp;host=Koma-YT.PAGeS.Dev&amp;sni=Koma-YT.PAGeS.Dev&amp;allowInsecure=1#v2ray_dalghak
-trojan://humanity@104.19.229.21:443?path=%2Fassignment&amp;security=tls&amp;host=www.multiplydose.com&amp;type=ws&amp;sni=www.multiplydose.com#%40v2rayRoom
-trojan://humanity@sourceforge.net:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;type=ws&amp;host=www.calmloud.com&amp;path=/assignment&amp;security=tls&amp;fp=chrome&amp;sni=www.calmloud.com&amp;alpn=http/1.1#@GozargahAzad|
-trojan://humanity@sourceforge.net:443?path=%2Fassignment&amp;security=tls&amp;alpn=http%2F1.1&amp;host=www.calmloud.com&amp;fp=chrome&amp;type=ws&amp;sni=www.calmloud.com#%40v2rayRoom
-trojan://humanity@sourceforge.net:443?type=ws&amp;host=www.calmloud.com&amp;path=/assignment&amp;security=tls&amp;fp=chrome&amp;sni=www.calmloud.com&amp;alpn=http/1.1#
+trojan://635340b47bddf8f41c123dc6f2b5f7ce@18.162.49.218:53018?allowInsecure=1&amp;sni=www.nintendogames.net#[62307]
+trojan://humanity@188.121.121.183:443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.creationlong.org&amp;type=ws&amp;allowInsecure=0&amp;sni=www.creationlong.org#%40VoltTunnelx
+trojan://humanity@2.144.2.245:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#SryLove
+trojan://humanity@sourceforge.net:443?type=ws&amp;host=www.calmloud.com&amp;path=/assignment&amp;security=tls&amp;fp=chrome&amp;sni=www.calmloud.com&amp;alpn=http/1.1#%40filembad
+trojan://humanity@v1.dabache.top:443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.multiplydose.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.multiplydose.com#%F0%9F%87%B3%F0%9F%87%B1%20t.me%2FNatrixo%20AA
+trojan://humanity@v1.dabache.top:443?security=tls&amp;type=ws&amp;sni=www.multiplydose.com&amp;path=/assignment&amp;host=www.multiplydose.com#%F0%9F%87%B3%F0%9F%87%B1%20t.me%2FNatrixo%20AA
