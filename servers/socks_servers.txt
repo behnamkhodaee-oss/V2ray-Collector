@@ -1,3 +1,4 @@
-socks://Og@109.122.252.86:1080#%40Shomarrreh
-socks://Og@192.168.137.1:10808#%40Maznet-Spoof
-socks://Og@81.12.80.194:3030#%40FastNetTools
+socks://Og@109.122.252.86:1080#
+socks://Og@81.12.24.237:25497#%40B2vasl1
+socks://Og@81.12.80.194:3030#@Vasl
+socks://QHZpcGNvbmZpbmdnOkB2aXBjb25maW5nZw%3D%3D@91.222.196.8:7071#%F0%9F%A6%89%40FreeConfigForYou
