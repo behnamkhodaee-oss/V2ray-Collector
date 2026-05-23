@@ -1,1 +1,1 @@
-socks://Og@109.122.252.86:1080#https://t.me/ConfigX2ray
+socks://Og@109.122.252.86:1080#%40Hddify
