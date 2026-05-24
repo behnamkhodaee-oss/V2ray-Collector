@@ -1,6 +1,4 @@
-trojan://79fcc6ec-bb3a-40d4-a009-67f74fd6d294@melllli.ioap-pajid.org:443?security=tls&amp;insecure=0&amp;headerType=none&amp;type=tcp&amp;allowInsecure=0&amp;sni=melllli.ioap-pajid.org#%DA%A9%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%DB%8C%20%D9%85%D8%A7%20%40FastNetTools
-trojan://humanity@2.144.20.147:40443?type=ws&amp;security=tls&amp;path=%2Fassignment&amp;host=www.ignitelimit.com&amp;sni=www.ignitelimit.com&amp;allowInsecure=0#v2ray_dalghak
-trojan://humanity@2.144.23.72:40443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#%40Vasl
-trojan://humanity@2.144.6.200:40443?type=ws&amp;security=tls&amp;path=%2Fassignment&amp;host=www.creationlong.org&amp;sni=www.creationlong.org&amp;fp=chrome&amp;allowInsecure=1#v2ray_dalghak
-trojan://humanity@sourceforge.net:443?path=%2Fassignment&amp;security=tls&amp;alpn=http%2F1.1&amp;host=www.calmloud.com&amp;fp=chrome&amp;type=ws&amp;sni=www.calmloud.com#%40filembad
-trojan://humanity@sourceforge.net:443?type=ws&amp;host=www.calmloud.com&amp;path=/assignment&amp;security=tls&amp;fp=chrome&amp;sni=www.calmloud.com&amp;alpn=http/1.1#%F0%9F%87%AB%F0%9F%87%B7%20t.me%2FNatrixo%20AA
+trojan://162534@217.60.248.94:8443?security=tls&amp;sni=cchh2.pages.dev&amp;insecure=1&amp;allowInsecure=1&amp;type=ws&amp;host=cchh2.pages.dev&amp;path=/?ed=2560&amp;https://t.me/WangCai2
+trojan://79fcc6ec-bb3a-40d4-a009-67f74fd6d294@melllli.ioap-pajid.org:443?security=tls&amp;insecure=0&amp;headerType=none&amp;type=tcp&amp;allowInsecure=0&amp;sni=melllli.ioap-pajid.org#filembad-8
+trojan://humanity@2.144.23.72:40443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#@ProxyV2IR
+trojan://humanity@sourceforge.net:443?type=ws&amp;host=www.calmloud.com&amp;path=/assignment&amp;security=tls&amp;fp=chrome&amp;sni=www.calmloud.com&amp;alpn=http/1.1#https://t.me/Configir98
