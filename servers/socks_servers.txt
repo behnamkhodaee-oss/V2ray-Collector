@@ -1,2 +1,1 @@
-socks://Og@81.12.80.194:3030#@byiroh
-socks://ZXJtaWE6RXJtaWEzNDcyI0AxODUuMjMxLjE4My4yMjk6ODA=#@ehsawn8
+socks://Og@109.122.252.86:1080#
