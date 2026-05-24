@@ -1,8 +1,2 @@
-socks://45.147.76.238:10808?type=tcp#%40vasl_bashim
-socks://Og@109.122.252.86:1080#%40i10VPN%20-%20Psiphon%2088
-socks://Og@127.0.0.1:1080#@Shh_Proxy
-socks://Og@188.121.104.170:4444#%F0%9F%87%AE%F0%9F%87%B728558%20%7C%20%E2%9A%A1%EF%B8%8FTelegram%20%3D%20t.me%2FLonUp_M
-socks://Og@62.220.126.56:30170#
-socks://Og@62.220.126.92:30376#
-socks://Og@62.220.126.92:30871#
-socks://Og@81.12.80.194:3030#
+socks://Og@1.1.1.1:10808#pc
+socks://Og@81.12.80.194:3030#%40Hiddify_Nexttt%20%F0%9F%91%88%F0%9F%8E%8D%20%DA%A9%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%DB%8C%20%D9%85%D8%A7
