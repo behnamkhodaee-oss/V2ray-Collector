@@ -1,1 +1,1 @@
-socks://93.113.230.143:10808?type=tcp#https://t.me/Configir98
+socks://93.113.230.143:10808?type=tcp#@vipV2rayNGnp
