@@ -1,7 +1,3 @@
-trojan://&nbsp;که
-trojan://humanity@127.0.0.1:40443?host=www.calmlunch.com&amp;path=%2Fassignment&amp;sni=www.calmlunch.com&amp;type=ws#ProxyMtpVPN-15
-trojan://humanity@127.0.0.1:40443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.ignitelimit.com#FLOKI%20%40proxy_kafee
-trojan://humanity@188.121.123.55:40443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.calmlunch.com&amp;type=ws&amp;allowInsecure=0&amp;sni=www.calmlunch.com#%E2%9C%85%40v2r_ayorg
-trojan://humanity@188.121.96.66:40443?path=%2Fassignment&amp;security=tls&amp;host=www.ignitelimit.com&amp;type=ws&amp;sni=www.ignitelimit.com#filembad-22
-trojan://humanity@37.32.30.26:443?type=ws&amp;security=tls&amp;path=%2Fassignment&amp;host=www.creationlong.org&amp;sni=www.creationlong.org&amp;allowInsecure=0#
-trojan://humanity@37.32.6.121:40443?path=%2Fassignment&amp;security=tls&amp;insecure=1&amp;host=www.ignitelimit.com&amp;type=ws&amp;allowInsecure=1&amp;sni=www.ignitelimit.com#%F0%9F%8C%90Join%3A%20https%3A%2F%2Ft.me%2FConfig0plus%20%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%F0%9F%94%A5
+trojan://8r%3C%5B9%27l6hAO%238ZQi@94.101.177.20:2087?path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&amp;security=tls&amp;host=Koma-YT.PAGeS.Dev&amp;type=ws&amp;sni=Koma-YT.PAGeS.Dev#https://t.me/Configir98
+trojan://humanity@104.20.42.250:443?security=tls&amp;type=ws&amp;host=www.calmloud.com&amp;path=%2Fassignment&amp;sni=www.calmloud.com&amp;fp=ios&amp;allowInsecure=1#filembad-11
+trojan://humanity@127.0.0.1:40443?path=%2Fassignment&amp;sni=www.multiplydose.com&amp;type=ws#ProxyMtpVPN-20
