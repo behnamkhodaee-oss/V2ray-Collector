@@ -1,2 +1,2 @@
-socks://Og@62.220.126.92:25864#%40Moft_Vpn
-socks://Og@81.12.24.160:26154#%40Moft_Vpn
+socks://Og@62.220.126.92:25864#proxy_kafee
+socks://Og@81.12.24.160:26154#proxy_kafee
